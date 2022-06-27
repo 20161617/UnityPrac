@@ -306,6 +306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1543216753085116367, guid: ca014879105e38940824f2aeca60623c, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 14a397a9a270a99429bdc2a0abe0b92e, type: 2}
     - target: {fileID: 1543216753092369487, guid: ca014879105e38940824f2aeca60623c, type: 3}
       propertyPath: m_Name
       value: PT_Medieval_Plague_Doctor
@@ -373,6 +377,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1835fd547bb456c4489d083ed05086d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 5
 --- !u!1 &1715103145
 GameObject:
   m_ObjectHideFlags: 0
