@@ -17,11 +17,20 @@ public class Player : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float g = Input.GetAxis("Vertical");
-        h = h * moveSpeed * Time.deltaTime;
-        g = g * moveSpeed * Time.deltaTime;
-        Vector3 vector = new Vector3(h, 0, g);
-        this.transform.position += vector;
-        transform.forward = vector.normalized;
+      
+        if (h == 0 && g == 0)
+        {
+            this.GetComponent<Animator>().SetBool("isRun", false);
+        }
+        else
+        {
+            this.GetComponent<Animator>().SetBool("isRun", true);
+            h = h * moveSpeed * Time.deltaTime;
+            g = g * moveSpeed * Time.deltaTime;
+            Vector3 vector = new Vector3(h, 0, g);
+            this.transform.position += vector;
+            transform.forward = vector.normalized;
+        }
     }
 
     void Awake()
